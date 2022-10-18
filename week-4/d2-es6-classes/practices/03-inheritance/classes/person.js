@@ -23,7 +23,6 @@ class Person {
         return;
       }
     }
-
     people.forEach((person) => person.introduce());
   }
 }
