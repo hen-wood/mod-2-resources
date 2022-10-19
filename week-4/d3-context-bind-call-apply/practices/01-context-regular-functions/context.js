@@ -36,3 +36,8 @@ const dory = new Fish('Dory')
 /********************************* Scenario 5 *********************************/
 // const swim = nemo.swim;
 // swim() // TypeError: Cannot read properties of undefined (reading 'name')
+
+
+/*
+global object is protected from instance methods, so scenario 5 will have no context
+*/
