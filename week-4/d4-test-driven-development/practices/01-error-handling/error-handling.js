@@ -6,14 +6,31 @@ function sum(array) {
   }
   return sum;
 }
-
-let res = sum(null);
-console.log(res);
+try {
+  let res = sum(null);
+  console.log(res);
+} catch (e) {
+  console.log(e.message)
+}
 
 // 2.
 // tests
-sayName("Alex");
-sayName(1);
+function sayName(name) {
+  if (typeof name !== 'string') {
+    throw TypeError('Custom TypeError Message');
+  } else {
+    console.log(name)
+  }
+}
+try {
+  sayName('Alex')
+  sayName(1);
+} catch (e) {
+  if (e instanceof TypeError) {
+    console.log(e.name + ':', e.message)
+  }
+}
+
 // Your code here
 
 // 3.
@@ -23,4 +40,10 @@ function greet(greeting) {
   }
 
   console.log(greeting);
+}
+
+try {
+  greet()
+} catch (e) {
+  console.log('Whatever I want')
 }

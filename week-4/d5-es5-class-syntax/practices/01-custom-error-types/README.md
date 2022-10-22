@@ -92,7 +92,7 @@ nameInput.changeInput("Ganondorf");
 // throws MaximumLengthExceededError: Maximum length exceeded by 4
 
 // When maximum length is specified and is not exceeded:
-const nameInput = new Field('Name', 'Zelda', 5); 
+const nameInput = new Field('Name', 'Zelda', 5);
 // Field { inputName: 'Name', value: 'Zelda', maxLength: 5 }
 nameInput.changeInput("Sheik");
 // does not throw an error

@@ -60,19 +60,27 @@
 // }
 
 // console.log(sum(1, 2, 3));
-class Fruit {
-    constructor(name) {
-        this.name = name;
-    }
+// class Fruit {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    eat = () => {
-        console.log(`${this.name} has a bite mark`);
+//     eat = () => {
+//         console.log(`${this.name} has a bite mark`);
+//     }
+// }
+
+// const apple = new Fruit('apple');
+// const pear = new Fruit('pear')
+// const eat = apple.eat;
+// const eatPear = pear.eat.bind(pear)
+// eat()
+// eatPear()
+try {
+    const hello = 'Hello World';
+    if (typeof hello !== 'string') {
+        throw new Error('Hello?');
     }
+} catch (e) {
+    console.log(e.message);
 }
-
-const apple = new Fruit('apple');
-const pear = new Fruit('pear')
-const eat = apple.eat;
-const eatPear = pear.eat.bind(pear)
-eat()
-eatPear()

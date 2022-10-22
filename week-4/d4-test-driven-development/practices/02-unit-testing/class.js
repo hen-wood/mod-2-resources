@@ -1,13 +1,13 @@
 class Word {
-  constructor(word) {
-    this.word = word;
+  constructor(name) {
+    this.name = name;
   }
 
   removeVowels() {
     let vowels = "aeiouAEIOU";
     let newWord = "";
-    for (let i = 0; i < this.word.length; i++) {
-      let char = this.word[i];
+    for (let i = 0; i < this.name.length; i++) {
+      let char = this.name[i];
       if (!vowels.includes(char)) {
         newWord += char;
       }
@@ -18,8 +18,8 @@ class Word {
   removeConsonants() {
     let vowels = "aeiouAEIOU";
     let newWord = "";
-    for (let i = 0; i < this.word.length; i++) {
-      let char = this.word[i];
+    for (let i = 0; i < this.name.length; i++) {
+      let char = this.name[i];
       if (vowels.includes(char)) {
         newWord += char;
       }
@@ -30,15 +30,15 @@ class Word {
   pigLatin() {
     let vowels = "aeiouAEIOU";
 
-    if (vowels.includes(this.word[0])) {
-      return this.word + "yay";
+    if (vowels.includes(this.name[0])) {
+      return this.name + "yay";
     }
 
-    for (let i = 0; i < this.word.length; i++) {
-      let char = this.word[i];
+    for (let i = 0; i < this.name.length; i++) {
+      let char = this.name[i];
       if (vowels.includes(char)) {
-        let first_half = this.word.slice(0, i);
-        let second_half = this.word.slice(i);
+        let first_half = this.name.slice(0, i);
+        let second_half = this.name.slice(i);
         return second_half + first_half + "ay";
       }
     }
