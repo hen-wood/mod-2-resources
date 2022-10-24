@@ -69,18 +69,40 @@
 //         console.log(`${this.name} has a bite mark`);
 //     }
 // }
-
+// const apple = new Fruit('apple')
+// apple.pear()
 // const apple = new Fruit('apple');
 // const pear = new Fruit('pear')
 // const eat = apple.eat;
 // const eatPear = pear.eat.bind(pear)
 // eat()
 // eatPear()
-try {
-    const hello = 'Hello World';
-    if (typeof hello !== 'string') {
-        throw new Error('Hello?');
-    }
-} catch (e) {
-    console.log(e.message);
-}
+// try {
+//     const hello = 'Hello World';
+//     if (typeof hello !== 'string') {
+//         throw new Error('Hello?');
+//     }
+// } catch (e) {
+//     console.log(e.message);
+// }
+// class NameError extends Error {
+//     constructor(...params) {
+//         super(...params);
+
+//         if (Error.captureStackTrace) {
+//             Error.captureStackTrace(this, NameError);
+//         }
+
+//         this.name = 'NameError';
+//         this.message = 'There was a problem with the name';
+//     }
+// }
+
+// try {
+//     const name = 5;
+//     if (typeof name !== 'string') {
+//         throw new NameError('Name cannot be a string');
+//     }
+// } catch (e) {
+//     console.log(e);
+// }
