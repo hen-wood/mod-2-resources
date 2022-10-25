@@ -2,24 +2,24 @@ const [addNums, addManyNums] = require("./phase-1");
 
 function addNums10Timing(increment) {
     let sumsArray = []
-    for (let i = increment; i <= 10 * increment; i += increment) {
-        // console.time('addNums10Timing')
+    console.time('addNums10Timing')
+    for (let i = 1; i <= 10; i++) {
         const start = Date.now()
-        sumsArray.push(addNums(i))
-        // console.timeEnd('addNums10Timing')
+        sumsArray.push(addNums(increment * i))
         const end = Date.now()
         console.log(end - start)
     }
+    console.timeEnd('addNums10Timing')
 
     return sumsArray
 }
 function addManyNums10Timing(increment) {
     let sumsArray = []
 
-    for (let i = increment; i <= 10 * increment; i += increment) {
+    for (let i = 1; i <= 10; i++) {
         // console.time('addManyNums10Timing')
         const start = Date.now()
-        sumsArray.push(addManyNums(i))
+        sumsArray.push(addManyNums(increment * i))
         // console.timeEnd('addManyNums10Timing')
         const end = Date.now()
         console.log(end - start)

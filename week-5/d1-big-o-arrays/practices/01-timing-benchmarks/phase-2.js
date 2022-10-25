@@ -10,6 +10,7 @@ function addNums10(increment) {
 
   return sumsArray
 }
+
 // Runs `addManyNums` in 10 increasing increments
 function addManyNums10(increment) {
   // Fill this in
